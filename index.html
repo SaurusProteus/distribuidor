@@ -34,9 +34,22 @@
         }
         
         img {
-            max-width: 100px;
+            max-width: 100%;
             height: auto;
             margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        #section1 img, #section2 img, #section3 img {
+            max-width: 100px; /* Se ajusta automáticamente al ancho del contenedor */
+            border-radius: 10px;
+        }
+        
+        /* Diseño de cuadrícula para las secciones ocultas */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
         }
     </style>
 </head>
@@ -44,7 +57,7 @@
 
 <div class="container">
     <!-- Agrega tu foto aquí -->
-    <img src="Saúl.jpg" alt="Tu Foto" width="150" height="150" border-radius=50%>
+    <img src="Saúl.jpg" alt="Tu Foto" width="150" height="150">
 
     <h1>Bienvenido a Mi Página Web</h1>
 
@@ -56,7 +69,7 @@
     <a class="button" onclick="showSection('section4')">Limpieza del Hogar</a>
 
     <!-- Secciones ocultas -->
-    <div id="section1">
+    <div id="section1" class="grid-container">
         <img src="Ajo.jpg" alt="Haz clic en la imágen para pedir más información por WhatsApp o has clic en el botón de "Tienda Oficial"" href="https://wa.me/c/5214641039719" target="_blank">
         <p>Ajo Concentrado.</p>
         <img src="BodyChocolate.jpg" alt="Haz clic en la imágen para pedir más información por WhatsApp o has clic en el botón de "Tienda Oficial"" href="https://wa.me/c/5214641039719" target="_blank">
