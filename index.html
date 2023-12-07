@@ -27,12 +27,12 @@
             border-radius: 5px;
         }
 
-        #section1, #section2, #section3, #section4 {
+        #section1, #section2, #section3 {
             display: none;
             text-align: center;
             margin-top: 20px;
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -40,11 +40,12 @@
             border-radius: 5px;
         }
 
+        /* Establecer un tamaño común para las imágenes dentro de las secciones */
         #section1 img, #section2 img, #section3 img {
-            max-width: 100px; /* Se ajusta automáticamente al ancho del contenedor */
-            border-radius: 10px;
+            max-width: 100%; /* Se ajusta automáticamente al ancho del contenedor */
+            border-radius: 5px;
         }
-        
+
         /* Diseño de cuadrícula para las secciones ocultas */
         .grid-container {
             display: grid;
@@ -57,55 +58,50 @@
 
 <div class="container">
     <!-- Agrega tu foto aquí -->
-    <img src="Saúl.jpg" alt="Tu Foto" width="150" height="150">
+    <img src="tu_foto.jpg" alt="Tu Foto" width="150" height="150">
 
     <h1>Bienvenido a Mi Página Web</h1>
 
     <!-- Botones iniciales -->
-    <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Tienda oficial</a>
-    <a class="button" onclick="showSection('section1')">Vitaminas y Suplementos</a>
-    <a class="button" onclick="showSection('section2')">Cosméticos y Tratamientos</a>
-    <a class="button" onclick="showSection('section3')">Aseo Personal</a>
-    <a class="button" onclick="showSection('section4')">Limpieza del Hogar</a>
+    <a class="button" onclick="showSection('section1')">Botón 1</a>
+    <a class="button" onclick="showSection('section2')">Botón 2</a>
+    <a class="button" onclick="showSection('section3')">Botón 3</a>
+    <a class="button" href="https://www.ejemplo.com" target="_blank">Redireccionar</a>
 
     <!-- Secciones ocultas -->
     <div id="section1" class="grid-container">
-        <img src="Ajo.jpg" alt="Haz clic en la imágen para pedir más información por WhatsApp o has clic en el botón de "Tienda Oficial"" href="https://wa.me/c/5214641039719" target="_blank">
-        <p>Ajo Concentrado.</p>
-        <img src="BodyChocolate.jpg" alt="Haz clic en la imágen para pedir más información por WhatsApp o has clic en el botón de "Tienda Oficial"" href="https://wa.me/c/5214641039719" target="_blank">
-        <p>Malteada de chocolate.</p>
-        <!-- Puedes agregar más contenido aquí según tus necesidades -->
-    </div>
-
-    <div id="section2">
+        <img src="imagen1.jpg" alt="Descripción 1">
         <img src="imagen2.jpg" alt="Descripción 2">
-        <p>Texto descriptivo 2.</p>
-        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+        <img src="imagen3.jpg" alt="Descripción 3">
+        <!-- Puedes agregar más imágenes aquí según tus necesidades -->
     </div>
 
-    <div id="section3">
-        <img src="imagen3.jpg" alt="Descripción 3">
-        <p>Texto descriptivo 3.</p>
-        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+    <div id="section2" class="grid-container">
+        <img src="imagen4.jpg" alt="Descripción 4">
+        <img src="imagen5.jpg" alt="Descripción 5">
+        <img src="imagen6.jpg" alt="Descripción 6">
+        <!-- Puedes agregar más imágenes aquí según tus necesidades -->
     </div>
-    <div id="section4">
-        <img src="imagen3.jpg" alt="Descripción 3">
-        <p>Texto descriptivo 3.</p>
-        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+
+    <div id="section3" class="grid-container">
+        <img src="imagen7.jpg" alt="Descripción 7">
+        <img src="imagen8.jpg" alt="Descripción 8">
+        <img src="imagen9.jpg" alt="Descripción 9">
+        <!-- Puedes agregar más imágenes aquí según tus necesidades -->
     </div>
-    </div>
-    
-    <script>
-        function showSection(sectionId) {
-            // Oculta todas las secciones
-            document.getElementById('section1').style.display = 'none';
-            document.getElementById('section2').style.display = 'none';
-            document.getElementById('section3').style.display = 'none';
-            document.getElementById('section4').style.display = 'none';
-            //document.getElementById('section3').sty
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-        
-    </body>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Oculta todas las secciones
+        document.getElementById('section1').style.display = 'none';
+        document.getElementById('section2').style.display = 'none';
+        document.getElementById('section3').style.display = 'none';
+
+        // Muestra la sección seleccionada
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+</body>
 </html>
