@@ -1,33 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Página de redirección</title>
-    <meta name="google-site-verification" content="6Wo29cYLkApjxVwLYpPT4c50gFyfI8pwoo7RPrx6Atw" />
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11412381911"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-11412381911');
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
 
-     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L30S69VE21">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
 
-      gtag('config', 'G-L30S69VE21');
-    </script>
-    
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #section1, #section2, #section3 {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // Utiliza window.location.href para redirigir a la nueva página
-        window.location.href = "https://www.amway.com.mx/Amway.Page/ThePage.aspx?Tienda=Salamanca"; // Reemplaza con la URL que desees abrir
-    </script>
+
+<div class="container">
+    <h1>Bienvenido a Mi Página Web</h1>
+
+    <!-- Botones iniciales -->
+    <a class="button" onclick="showSection('section1')">Botón 1</a>
+    <a class="button" onclick="showSection('section2')">Botón 2</a>
+    <a class="button" onclick="showSection('section3')">Botón 3</a>
+    <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Redireccionar</a>
+
+    <!-- Secciones ocultas -->
+    <div id="section1">
+        <img src="imagen1.jpg" alt="Descripción 1">
+        <p>Texto descriptivo 1.</p>
+        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+    </div>
+
+    <div id="section2">
+        <img src="imagen2.jpg" alt="Descripción 2">
+        <p>Texto descriptivo 2.</p>
+        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+    </div>
+
+    <div id="section3">
+        <img src="imagen3.jpg" alt="Descripción 3">
+        <p>Texto descriptivo 3.</p>
+        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+    </div>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Oculta todas las secciones
+        document.getElementById('section1').style.display = 'none';
+        document.getElementById('section2').style.display = 'none';
+        document.getElementById('section3').style.display = 'none';
+
+        // Muestra la sección seleccionada
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
