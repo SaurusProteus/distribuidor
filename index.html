@@ -52,6 +52,38 @@
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 10px;
         }
+
+        .grid-item {
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+        
     </style>
 </head>
 <body>
@@ -60,7 +92,7 @@
     <!-- Agrega tu foto aquí -->
     <img src="Saúl.jpg" alt="Tu Foto" width="150" height="150">
 
-    <h1>Bienvenido a Mi Página Web</h1>
+    <h1>Distribuidor de Productos Amway</h1>
 
     <!-- Botones iniciales -->
     <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Mi Tienda Amway Oficial</a>
@@ -72,8 +104,30 @@
 
     <!-- Secciones ocultas -->
     <div id="section1" class="grid-container">
-        <img src="Daily90.jpg" alt="Descripción 1">
-        <p>Texto descriptivo 1.</p>
+        <div class="grid-item">
+            <img src="Daily90.jpg" alt="Daily 90">
+            <div class="overlay">
+                <h3>Multivitamínico Daily+ - 90 Tabletas</h3>
+                <p>Precio: $744.00</p>
+                <p>Mantén tu bienestar integral con una tableta al día. 22 vitaminas y minerales esenciales, con exclusivo jugo de acerola deshidratada, zanahoria morada y bayas de saúco, adicionado con luteína. Aporta 12 vitaminas, 10 minerales y concentrados de plantas.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="Daily45.jpg" alt="Daily 45">
+            <div class="overlay">
+                <h3>Multivitamínico Daily+ - 50 Tabletas</h3>
+                <p>Precio: $411.99</p>
+                <p>Mantén tu bienestar integral con una tableta al día. 22 vitaminas y minerales esenciales, con exclusivo jugo de acerola deshidratada, zanahoria morada y bayas de saúco, adicionado con luteína. Aporta 12 vitaminas, 10 minerales y concentrados de plantas.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <img src="DoubleX.jpg" alt="Doble X Pastillero">
+            <div class="overlay">
+                <h3>Multivitamínico DoubleX - 186 Tabletas + Paastillero</h3>
+                <p>Precio: $1541.99</p>
+                <p>¡El suplemento más vendido del mundo! Contiene 12 vitaminas, 10 minerales y 22 concentrados de plantas. Tecnología PhytoProtect: una mezcla exclusiva de extractos de romero, cúrcuma y Fava D’anta.</p>
+            </div>
+        </div>
         <img src="Daily45.jpg" alt="Descripción 2">
         <p>Texto descriptivo 2.</p>
         <img src="DoubleX.jpg" alt="Descripción 3">
