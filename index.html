@@ -27,7 +27,7 @@
             border-radius: 5px;
         }
 
-        #section1, #section2, #section3 {
+        #section1, #section2, #section3, #section4 {
             display: none;
             text-align: center;
             margin-top: 20px;
@@ -45,22 +45,23 @@
 
 <div class="container">
     <!-- Agrega tu foto aquí -->
-    <img src="Saul.jpg" alt="Tu Foto" width="150" height="150">
+    <img src="Saúl.jpg" alt="Tu Foto" width="150" height="150">
 
     <h1>Bienvenido a Mi Página Web</h1>
 
     <!-- Botones iniciales -->
+    <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Tienda oficial</a>
     <a class="button" onclick="showSection('section1')">Vitaminas y Suplementos</a>
     <a class="button" onclick="showSection('section2')">Cosméticos y Tratamientos</a>
     <a class="button" onclick="showSection('section3')">Aseo Personal</a>
-    <a class="button" onclick="showSection('section3')">Limpieza del Hogar</a>
-    <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Tienda oficial</a>
+    <a class="button" onclick="showSection('section4')">Limpieza del Hogar</a>
 
     <!-- Secciones ocultas -->
     <div id="section1">
         <img src="Ajo.jpg" alt="Descripción 1">
-        <img src="BodyChocolate.jpg" alt="Descripción 1">
         <p>Texto descriptivo 1.</p>
+        <img src="BodyChocolate.jpg" alt="Descripción 1">
+        <p>Texto descriptivo 2.</p>
         <!-- Puedes agregar más contenido aquí según tus necesidades -->
     </div>
 
@@ -75,6 +76,11 @@
         <p>Texto descriptivo 3.</p>
         <!-- Puedes agregar más contenido aquí según tus necesidades -->
     </div>
+    <div id="section4">
+        <img src="imagen3.jpg" alt="Descripción 3">
+        <p>Texto descriptivo 3.</p>
+        <!-- Puedes agregar más contenido aquí según tus necesidades -->
+    </div>
 </div>
 
 <script>
@@ -82,4 +88,6 @@
         // Oculta todas las secciones
         document.getElementById('section1').style.display = 'none';
         document.getElementById('section2').style.display = 'none';
-        document.getElementById('section3').sty
+        document.getElementById('section3').style.display = 'none';
+        document.getElementById('section4').style.display = 'none';
+        //document.getElementById('section3').sty
