@@ -37,19 +37,23 @@
             max-width: 100%;
             height: auto;
             margin-bottom: 10px;
+            border-radius: 50%; /* Agrega esto para hacer la imagen redonda */
         }
     </style>
 </head>
 <body>
 
 <div class="container">
+    <!-- Agrega tu foto aquí -->
+    <img src="tu_foto.jpg" alt="Tu Foto" width="150" height="150">
+
     <h1>Bienvenido a Mi Página Web</h1>
 
     <!-- Botones iniciales -->
     <a class="button" onclick="showSection('section1')">Botón 1</a>
     <a class="button" onclick="showSection('section2')">Botón 2</a>
     <a class="button" onclick="showSection('section3')">Botón 3</a>
-    <a class="button" href="https://www.amway.com.mx/Salamanca" target="_blank">Redireccionar</a>
+    <a class="button" href="https://www.ejemplo.com" target="_blank">Redireccionar</a>
 
     <!-- Secciones ocultas -->
     <div id="section1">
@@ -76,12 +80,4 @@
         // Oculta todas las secciones
         document.getElementById('section1').style.display = 'none';
         document.getElementById('section2').style.display = 'none';
-        document.getElementById('section3').style.display = 'none';
-
-        // Muestra la sección seleccionada
-        document.getElementById(sectionId).style.display = 'block';
-    }
-</script>
-
-</body>
-</html>
+        document.getElementById('section3').sty
